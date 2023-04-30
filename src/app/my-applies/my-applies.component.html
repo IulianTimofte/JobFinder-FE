@@ -1,0 +1,12 @@
+<h2 class="page-title">My Applied Announcements</h2>
+
+<div class="announcements-container">
+  <div *ngFor="let announce of myAppliedAnnounces" class="announce-card">
+    <h3 class="announce-title">{{announce.announceTitle}}</h3>
+    <p class="announce-description">{{announce.jobDescription}}</p>
+    <p class="announce-status">{{announce.status}}</p>
+  </div>
+  <div *ngIf="myAppliedAnnounces.length === 0" class="no-announcements">
+    You haven't applied to any announcements yet.
+  </div>
+</div>

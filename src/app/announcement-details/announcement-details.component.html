@@ -1,0 +1,27 @@
+  <h1>Announce Details</h1>
+  <div *ngIf="announcement"></div>
+<div>
+  <label>Title:</label>
+  <p>{{  announcement.title  }}</p>
+</div>
+<div>
+  <label>Date:</label>
+  <p>{{ announcement.date }}</p>
+</div>
+<div>
+  <label>Job Description:</label>
+  <p>{{ announcement.jobDescription}}</p>
+</div>
+<div>
+    <label>Price:</label>
+    <p>{{ announcement.price}}</p>
+  </div>
+  <div>
+    <label>Location:</label>
+    <p>{{ announcement.location}}</p>
+  </div>
+  <button mat-raised-button color="primary" (click)="onApply()">Apply</button>
+  <button mat-raised-button color="warn" (click)="onRemoveApply()">Remove Apply</button>
+  <div *ngIf="applyStatus">{{ applyStatus }}</div>
+
+  

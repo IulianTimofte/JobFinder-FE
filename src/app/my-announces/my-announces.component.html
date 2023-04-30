@@ -1,0 +1,24 @@
+<h1>My Announcements</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let announce of announces">
+      <td>{{ announce.title }}</td>
+      <td>{{ announce.jobDescription }}</td>
+      <td>{{ announce.price }}</td>
+      <td>
+        <a routerLink="/announces/{{ announce.id }}">View</a>
+        <a routerLink="/announces/{{ announce.id }}/edit">Edit</a>
+        <!-- <button (click)="deleteAnnounce(announce.id)">Delete</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+

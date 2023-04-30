@@ -1,0 +1,26 @@
+<h1>Profile Page</h1>
+<div>
+  <label>Email:</label>
+  <p>{{ user.email }}</p>
+</div>
+<div>
+  <label>First Name:</label>
+  <p>{{ user.firstName }}</p>
+</div>
+<div>
+  <label>Last Name:</label>
+  <p>{{ user.lastName }}</p>
+</div>
+<div>
+    <label>Password:</label>
+    <p *ngIf="showPassword">{{ plainPassword }}</p>
+    <p *ngIf="!showPassword">********</p>
+</div>
+<div>
+  <label>CV:</label>
+  <p>{{ getFileName() }}</p>
+  <button *ngIf="user.cv" (click)="removeFile()">Remove</button>
+  <!-- <p>{{ user.cv ? user.cv.name : 'No file selected' }}</p> -->
+  <input type="file" (change)="onFileSelected($event)">
+</div>
+<button (click)="togglePasswordVisibility()">Show/Hide Password</button>

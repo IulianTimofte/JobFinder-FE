@@ -1,0 +1,9 @@
+<div fxLayout="row">
+    
+<ng-container *ngIf="router.url !== '/login' && router.url !== '/register'">
+  <app-sidebar></app-sidebar>
+</ng-container>
+<router-outlet></router-outlet>
+</div>
+  
+  
